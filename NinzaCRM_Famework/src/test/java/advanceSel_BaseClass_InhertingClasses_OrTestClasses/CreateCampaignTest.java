@@ -1,21 +1,15 @@
 package advanceSel_BaseClass_InhertingClasses_OrTestClasses;
 
-import org.openqa.selenium.WebDriver;
+
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
-
 import config_BaseClass.BaseClass;
 import genericUtility_Methods.ExcelFileUtility;
 import genericUtility_Methods.JavaUtility;
-import genericUtility_Methods.PropertiesFileUtility;
 import genericUtility_Methods.WebDriverUtility;
 import pomClasses.CampaignPage;
 import pomClasses.HomePage;
-import pomClasses.LoginPage;
 import org.testng.annotations.Listeners;
 
 

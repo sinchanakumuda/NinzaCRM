@@ -17,7 +17,7 @@ public class DateCreation {
 		System.out.println(currentdate);//18-02-2026
 		//after 15
 		Calendar cal=sim.getCalendar();
-		cal.add(cal.DAY_OF_MONTH,15);
+		cal.add(Calendar.DAY_OF_MONTH,15);
 		String expectedate=sim.format(cal.getTime());
 		System.out.println(expectedate);//18-02-2026
 		

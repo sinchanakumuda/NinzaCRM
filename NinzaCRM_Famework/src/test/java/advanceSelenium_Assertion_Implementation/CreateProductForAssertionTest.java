@@ -1,15 +1,16 @@
-package advanceSel_BaseClass_InhertingClasses_OrTestClasses;
+package advanceSelenium_Assertion_Implementation;
 import config_BaseClass.BaseClass;
 import genericUtility_Methods.ExcelFileUtility;
 import genericUtility_Methods.JavaUtility;
 import genericUtility_Methods.WebDriverUtility;
+import junit.framework.Assert;
 import pomClasses.HomePage;
 import pomClasses.Product;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 @Listeners(listener.ListenerImplementation.class)
-public class CreateProductTest extends BaseClass{
+public class CreateProductForAssertionTest extends BaseClass{
 	
 	
 	@Test(groups="smoketest")
@@ -61,11 +62,15 @@ public class CreateProductTest extends BaseClass{
 	          	  wlib.waitForVisibilityOfElement(driver, hp.getToastmsg()); 
 	          	  String msg = hp.getToastmsg().getText(); 
 	          	  
-	        	  if (msg.contains(productnameWithAlphabet)) { 
+	        	  /*if (msg.contains(productnameWithAlphabet)) { 
 		          	   System.out.println("product created"); 
 		          	  } else { 
 		          	   System.out.println("product not created"); 
-		          	  } 
+		          	  } */
+	          	  
+	          	  Assert.assertEquals(msg,productnameWithAlphabet);
+	        	  
+	        	  
 		          	  hp.getCloseMsg().click(); 
 	          	 
 	          

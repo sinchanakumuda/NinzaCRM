@@ -61,7 +61,7 @@ public class JavaUtility {
 		//Convert it into this format
 		SimpleDateFormat sim=new SimpleDateFormat("dd-MM-yyyy");
 		//Todays or current Date with the dd-MM-yyyy format
-		String currentDate=sim.format(d);
+	    sim.format(d);
 		
 		//To get 15 days or to get required date
 		Calendar cal=sim.getCalendar();

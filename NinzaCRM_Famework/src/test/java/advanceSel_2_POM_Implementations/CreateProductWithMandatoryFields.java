@@ -3,21 +3,15 @@ package advanceSel_2_POM_Implementations;
 //POM Import
 import pomClasses.LoginPage;
 import pomClasses.HomePage;
-import pomClasses.CampaignPage;
 import pomClasses.Product;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
 import genericUtility_Methods.ExcelFileUtility;
 import genericUtility_Methods.JavaUtility;
 import genericUtility_Methods.PropertiesFileUtility;
 import genericUtility_Methods.WebDriverUtility;
-
 import org.openqa.selenium.chrome.ChromeOptions;
 import java.util.Map;
 import java.util.HashMap;
@@ -45,7 +39,7 @@ public class CreateProductWithMandatoryFields {
 	    System.out.println("quantity "+quantity);
 	    System.out.println("price "+price);
 	     
-	    String priceWithRandom=productName+jlib.togetRandomCount();
+	    String productnameWithAlphabet=productName+jlib.togetRandomAlpha();
 	    
 	 
 	 
@@ -83,7 +77,7 @@ public class CreateProductWithMandatoryFields {
 	                 
 	               
 	                //Prodname             
-	                ap.getProductName().sendKeys(priceWithRandom); 
+	                ap.getProductName().sendKeys(productnameWithAlphabet); 
 					//Quantity
 	                ap.getQuantity().clear(); 
 	                ap.getQuantity().sendKeys(quantity); 
@@ -103,7 +97,7 @@ public class CreateProductWithMandatoryFields {
 	          	  wlib.waitForVisibilityOfElement(driver, hp.getToastmsg()); 
 	          	  String msg = hp.getToastmsg().getText(); 
 	          	 
-	          	  if (msg.contains(priceWithRandom)) { 
+	          	  if (msg.contains(productnameWithAlphabet)) { 
 	          	   System.out.println("product created"); 
 	          	  } else { 
 	          	   System.out.println("product not created"); 

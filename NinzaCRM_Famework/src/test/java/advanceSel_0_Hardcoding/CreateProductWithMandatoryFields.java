@@ -26,11 +26,7 @@ public class CreateProductWithMandatoryFields {
 				prefs.put("profile.password_manager_leak_detection", false); 
 				settings.setExperimentalOption("prefs", prefs); 
 				WebDriver driver=new ChromeDriver(settings); 
-				
 			
-				
-				 
-				  
 				  driver.manage().window().maximize(); 
 				  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); 
 				  driver.get("http://49.249.28.218:8098/"); 

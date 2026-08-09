@@ -55,7 +55,7 @@ public static void main(String[] args) {
 		  SimpleDateFormat sim=new SimpleDateFormat("dd-MM-yyyy"); 
 		  sim.format(date); 
 		  Calendar cal = sim.getCalendar(); 
-		  cal.add(cal.DAY_OF_MONTH, 30); 
+		  cal.add(Calendar.DAY_OF_MONTH, 30); 
 		  String reqdate = sim.format(cal.getTime()); 
 		  
 		driver.findElement(By.name("expectedCloseDate")).sendKeys(reqdate); 

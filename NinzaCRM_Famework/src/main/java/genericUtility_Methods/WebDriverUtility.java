@@ -3,8 +3,7 @@ import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Set;
-import java.util.logging.FileHandler;
-import java.awt.*;
+
 //import org.openqa.selenium.io.FileHandler;
 import org.apache.commons.io.FileUtils;
 

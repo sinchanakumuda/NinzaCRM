@@ -3,18 +3,12 @@ package advanceSel_1_Implementation_Of_Utilities;
 import org.openqa.selenium.chrome.ChromeOptions;
 import java.util.Map;
 import java.util.HashMap;
-import java.time.Duration;
-
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.*;
 import org.openqa.selenium.firefox.*;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import genericUtility_Methods.ExcelFileUtility;
 import genericUtility_Methods.JavaUtility;
 import genericUtility_Methods.PropertiesFileUtility;

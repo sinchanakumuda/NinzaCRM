@@ -2,18 +2,12 @@ package advanceSel_1_Implementation_Of_Utilities;
 import org.openqa.selenium.chrome.ChromeOptions;
 import java.util.Map;
 import java.util.HashMap;
-import java.time.Duration;
-
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.*;
 import org.openqa.selenium.firefox.*;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import genericUtility_Methods.ExcelFileUtility;
 import genericUtility_Methods.JavaUtility;
 import genericUtility_Methods.PropertiesFileUtility;
@@ -67,13 +61,13 @@ public class CreateProduct {
 	  System.out.println("quantity "+quantity1);
 	  System.out.println("price1 "+price1);
 	  
-	  String prodNameWithRandomNum=prodname + jutil.togetRandomCount();
+	  String productnameWithAlphabet=prodname + jutil.togetRandomAlpha();
 	 
 	  // enter details 
 	  driver.findElement(By.linkText("Products")).click(); 
 	  driver.findElement(By.xpath("//span[contains(text(),'Add Product')]")).click(); 
 	 
-	  driver.findElement(By.name("productName")).sendKeys(prodNameWithRandomNum); 
+	  driver.findElement(By.name("productName")).sendKeys(productnameWithAlphabet); 
 	 
 	  // Dropdown 1 
 	  WebElement categorydropdown = driver.findElement(By.name("productCategory")); 
@@ -106,7 +100,7 @@ public class CreateProduct {
 	  wutil.waitForVisibilityOfElement(driver, toastmsg); 
 	  String msg = toastmsg.getText(); 
 	 
-	  if (msg.contains(prodNameWithRandomNum)) { 
+	  if (msg.contains(productnameWithAlphabet)) { 
 	   System.out.println("product created"); 
 	  } 
 	 
